@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+/* RESET */
+
+
+*{
+    margin: 0;
+    padding: 0px;
+    
+}
+
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6fb;
+    color: black;
+    line-height: 1.6;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+
+a{
+    text-decoration: none;
+   
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+/* TOPO */
+.topo{
+    background-color: #0f172a;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    min-height: 85px;
+}
+
+.logo{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 10px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 14px;
+}
+
+
+.menu a{
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+
+menu a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* SEÇÃO HERO - GRID */
+
+.hero{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.hero-texto h1{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #0f172a;
+    margin: 20px 0;
+}
+
+.hero-texto p{
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 30px;
+}
+
+/* ETIQUETAS - INLINE */
+.etiqueta-linha{
+    display: inline;
+    background-color: #0f172a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.destaque-inline{
+    display: inline;
+    background-color: red;
+    color: black;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 10%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* BOTÕES - INLINE-BLOCK */
+
+.botao{
+    display: inline-block;
+    background-color: #0f172a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+
+.botao-primario{
+    background-color: #e5e7eb;
+    color: black;
+}
+
+/* IMAGEM PRINCIPAL */
+
+.hero-imagem img{
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 15px 40px black;
+}
+
+/* FOOTER - GRID */
+.rodape{
+    margin-top: 50px;
+    background-color: #0f172a;
+    color: white;
+    padding: 45px 0;
+}
+
+.rodape-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.rodape-grid h3{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.rodape-grid p{
+    color: #d1d5db;
+    margin-bottom: 5px;
+    
+}
