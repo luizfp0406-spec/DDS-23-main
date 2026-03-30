@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 /* RESET */
-
 * {
   margin: 0;
   padding: 0px;
 }
 
-/* BASE */
+/* Formatação base */
 body {
   font-family: "Inter", sans-serif;
   background-color: #f4f6fb;
@@ -15,205 +14,179 @@ body {
   line-height: 1.6;
 }
 
-/* IMAGENS */
 img {
-  max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
-  display: block; /* Remove space below images */
+  max-width: 100%;
+  display: block;
 }
 
-/* LINKS */
 a {
-  text-decoration: none; /* Remove o sublinhado dos links */
+  text-decoration: none;
 }
 
-/* LAYOUT */
 .container {
-  width: 90%; /* Largura máxima do conteúdo */
-  margin: 0 auto; /* Centraliza o conteúdo */
-  max-width: 1200px; /* Limita a largura máxima para telas maiores */
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 /* TOPO */
 .topo {
   background-color: #0f172a;
-  position: sticky; /* Mantém o topo fixo no topo da página */
-  top: 0; /* Define a posição do topo */
-  z-index: 2; /* Garante que o topo fique acima de outros elementos */
-  box-shadow: 0 5px 15px rgba(0, 217, 255, 0.15); /* Adiciona uma sombra para destacar o topo */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .navegacao {
-  display: flex; /* Define o layout como flexbox */
-  justify-content: space-between; /* Distribui os itens com espaço entre eles */
-  align-items: center; /* Alinha os itens verticalmente ao centro */
-  gap: 20px; /* Adiciona um espaço entre os itens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
   min-height: 85px;
 }
-
 .logo {
   color: white;
-  font-size: 1.5em; /* Define o tamanho da fonte para a logo */
-  font-weight: bolder; /* Deixa a logo em negrito */
-  letter-spacing: 10px; /* Adiciona espaçamento entre as letras da logo */
+  font-size: 1.5em;
+  font-weight: bolder;
+  letter-spacing: 7px;
 }
-
-/* MENU */
 .menu {
-    display: flex; /* Define o layout como flexbox */
-  gap: 14px; /* Adiciona um espaço entre os itens do menu */
-  list-style: none; /* Remove os marcadores da lista */
+  list-style: none;
+  display: flex;
+  gap: 14px;
+}
+.menu a {
+  color: white;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
-.menu a {
-  color: white; /* Define a cor dos links do menu */
-  font-weight: 700; /* Define o peso da fonte dos links do menu */
-  padding: 10px 15px; /* Adiciona um preenchimento para os links do menu */
-  border-radius: 10px; /* Adiciona bordas arredondadas aos links do menu */
-  transition: 0.5s; /* Adiciona uma transição suave para a cor de fundo */
-}
 .menu a:hover {
-  background-color: #1e293b; /* Altera a cor de fundo dos links do menu ao passar o mouse */
+  background: #1e293b;
 }
 
 /* SEÇÃO HERO - GRID */
-
 .hero {
-  display: grid; /* Define o layout como grid */
-  grid-template-columns: 1fr 1fr; /* Define duas colunas de largura igual */
-  gap: 35px; /* Adiciona um espaço entre as colunas */
-  align-items: center; /* Alinha os itens verticalmente ao centro */
-  padding: 50px 0; /* Adiciona um preenchimento vertical para a seção hero */
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 35px;
+  align-items: center;
+  padding: 50px 0;
 }
 
 .hero-texto h1 {
-  font-size: 3em; /* Define o tamanho da fonte do título principal */
-  line-height: 1.2; /* Define a altura da linha para o título principal */
-  color: #1e293b; /* Define a cor do título principal */
-  margin: 20px 0; /* Adiciona uma margem inferior para o título principal */
+  font-size: 3em;
+  line-height: 1.2;
+  color: #1e293b;
+  margin: 20px 0;
 }
 
 .hero-texto p {
-  font-size: 1.2em; /* Define o tamanho da fonte do parágrafo */
-  color: #334155; /* Define a cor do parágrafo */
-  margin-bottom: 30px; /* Adiciona uma margem inferior para o parágrafo */
-}
-
-/* ETIQUETA - INLINE */
-
-.etiqueta-linha {
-  display: inline; /* Define o layout como inline */
-  background-color: #dbeafe; /* Define a cor de fundo da etiqueta */
-  color: #1d4ed8; /* Define a cor do texto da etiqueta */
-  padding: 5px 10px; /* Adiciona um preenchimento para a etiqueta */
-  border-radius: 10%; /* Adiciona bordas arredondadas à etiqueta */
-  margin-right: 10px; /* Adiciona uma margem direita para a etiqueta */
-  font-weight: 600; /* Define o peso da fonte da etiqueta */
-}
-
-.destaque-inline {
-  display: inline; /* Define o layout como inline */
-  background-color: #dbeafe; /* Define a cor de fundo do destaque */
-  color: #1d4ed8; /* Define a cor do texto do destaque */
-  padding: 5px 10px; /* Adiciona um preenchimento para o destaque */
-  border-radius: 10%; /* Adiciona bordas arredondadas ao destaque */
-  font-weight: 600; /* Define o peso da fonte do destaque */
-}
-
-/* BOTÕES - INLINE-BLOCK */
-
-.botao {
-  display: inline-block; /* Define o layout como inline-block */
-  padding: 10px 20px; /* Adiciona um preenchimento para os botões */
-  border-radius: 10%; /* Adiciona bordas arredondadas aos botões */
-  font-weight: 600; /* Define o peso da fonte dos botões */
-  margin-right: 10px; /* Adiciona uma margem direita para os botões */
-}
-
-.botao-primario {
-  background-color: #3b82f6; /* Define a cor de fundo do botão primário */
-  color: white; /* Define a cor do texto do botão primário */
-  transition: 0.5s; /* Adiciona uma transição suave para a cor de fundo */
-}
-
-.botao-primario:hover {
-  background-color: #2563eb; /* Altera a cor de fundo do botão primário ao passar o mouse */
-}
-
-.botao-secundario {
-  background-color: #e5e7eb; /* Define a cor de fundo do botão secundário */
-  color: #1e293b; /* Define a cor do texto do botão secundário */
-  transition: 0.5s; /* Adiciona uma transição suave para a cor de fundo */
-}
-
-.botao-secundario:hover {
-  background-color: #cbd5e1; /* Altera a cor de fundo do botão secundário ao passar o mouse */
-}
-
-/* imagem */
-
-.hero-imagem img {
-  width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
-  border-radius: 20px; /* Adiciona bordas arredondadas à imagem */
-  object-fit: cover; /* Garante que a imagem mantenha suas proporções e preencha o contêiner */
-  box-shadow: 0 20px 40px black; /* Adiciona uma sombra para destacar a imagem */
-}
-
-/* FOOTER - GRID */
-
-.rodape {
-  margin-top: 50px; /* Adiciona uma margem superior para o rodapé */
-  background-color: #0f172a; /* Define a cor de fundo do rodapé */
-  color: white; /* Define a cor do texto do rodapé */
-  padding: 45px 0; /* Adiciona um preenchimento vertical para o rodapé */
-}
-
-.rodape-grid {
-  display: grid; /* Define o layout como grid */
-  grid-template-columns: 1fr 1fr 1fr; /* Define colunas responsivas com largura mínima de 200px */
-  gap: 30px; /* Adiciona um espaço entre as colunas */
-}
-
-.rodape-grid h3 {
-  font-size: 1.2em; /* Define o tamanho da fonte dos títulos do rodapé */
-  margin-bottom: 15px; /* Adiciona uma margem inferior para os títulos do rodapé */
-}
-
-.rodape-grid p {
-  color: #d1d5db; /* Define a cor do texto dos parágrafos do rodapé */
-  margin-bottom: 10px; /* Adiciona uma margem inferior para os parágrafos do rodapé */
-}
-
-/* SEÇÕES */
-
-.secao {
-  padding: 30px 0 50px 0;
-}
-
-.titulo-secao {
+  font-size: 1.2em;
+  color: #4b5563;
   margin-bottom: 25px;
 }
 
-.titulo-secao h2 {
-  font-size: 2em;
-  color: black;
-  margin-bottom: 8px;
+/* ETIQUETAS - INLINE */
+.etiqueta-linha {
+  display: inline;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 5px 10px;
+  border-radius: 10%;
+  margin-right: 10px;
+  font-weight: 600;
 }
 
-.titulo-secao p {
+.destaque-inline {
+  display: inline;
+  color: red;
+  font-weight: 700;
+}
+
+/* BOTÕES - INLINE-BLOCK */
+.botao {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10%;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.botao-primario {
+  background-color: red;
+  color: white;
+}
+
+.botao-secundario {
+  background-color: #e5e7eb;
+  color: black;
+}
+
+/* IMAGEM PRINCIPAL */
+.hero-imagem img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 15px 40px black;
+}
+
+/* FOOTER - GRID */
+.rodape {
+  margin-top: 50px;
+  background-color: #0f172a;
+  color: white;
+  padding: 45px 0;
+}
+
+.rodape-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.rodape-grid h3{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.rodape-grid p{
+    color: #d1d5db;
+    margin-bottom: 10px;
+}
+
+/* SEÇÕES */
+.secao{
+  padding: 30px 0 50px 0;
+}
+
+.titulo-secao{
+  margin-bottom: 25px;
+}
+
+.titulo-secao h2{
+  font-size: 2em;
+  color: #111827;
+  margin-bottom: 8px; 
+}
+
+.titulo-secao p{
   color: #6b7280;
 }
 
 /* BLOCK */
-
-.bloco-historia {
+.bloco-historia{
   background-color: white;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 30px lightgray;
 }
 
-/*  */
-.caixa-block {
+.caixa-block{
   display: block;
   background: linear-gradient(135deg, #fee2e2, #fecaca);
   color: #7f1d1d;
@@ -224,155 +197,151 @@ a {
 }
 
 /* INLINE E INLINE-BLOCK */
-
-.linha-exemplo,
-.linha-cards-inlineblock {
+.linha-exemplo, .linha-cards-inlineblock{
   background-color: white;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 2px 30px black;
 }
 
-.linha-exemplo {
+.linha-exemplo{
   margin-bottom: 20px;
 }
 
-.texto-exemplo {
-  font-size: 1em; /* Define o tamanho da fonte do texto de exemplo */
+.texto-exemplo{
+  font-size: 1em;
 }
 
-.item-inline {
-  display: inline; /* Define o layout como inline */
-  background-color: #fef3c7; /* Define a cor de fundo do item */
-  color: #92400e; /* Define a cor do texto do item */
-  padding: 5px 8px; /* Adiciona um preenchimento para o item */
-  border-radius: 5px; /* Adiciona bordas arredondadas ao item */
-  margin-left: 8px; /* Adiciona uma margem esquerda para o item */
-  font-weight: 700; /* Define o peso da fonte do item */
+.item-inline{
+  display: inline;
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-left: 8px;
+  font-weight: 700;
 }
-
 /* cards azuis */
-.card-inlineblock {
-  display: inline-block; /* Define o layout como inline-block */
-  width: 30%; /* Define a largura dos cards */
-  min-height: 190px; /* Define uma altura mínima para o card */
-  background-color: #eff6ff; /* Define a cor de fundo do card */
-  color: #1e3a8a;
-  border-radius: 15px; /* Adiciona bordas arredondadas ao card */
-  padding: 20px; /* Adiciona um preenchimento para o card */
+.card-inlineblock{
+  display: inline-block;
+  width: 28%;
+  min-height: 190px;
+  margin-right: 2%;
+  background-color: #eff6ff;
+  color:#1e3a8a;
+  border-radius: 15px;
+  padding: 20px;
 }
 
-.card-inlineblock h3 {
-  font-size: 1.5em; /* Define o tamanho da fonte do título do card */
-  margin-bottom: 10px; /* Adiciona uma margem inferior para o título do card */
+.card-inlineblock h3{
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-.card-inlineblock p {
-  font-size: 0.7em; /* Define o tamanho da fonte do parágrafo do card */
-  line-height: 1.5; /* Define a altura da linha para o parágrafo do card */
+.card-inlineblock p{
+  font-size: 0.7em;
+  line-height: 1.5;
 }
 
 /* DISPLAY FLEX */
-
-.lista-carreira {
-  display: flex; /* Define o layout como flexbox */
-  gap: 20px; /* Adiciona um espaço entre os itens da lista de carreira */
-  flex-wrap: wrap; /* Permite que os itens da lista de carreira quebrem para a próxima linha se necessário */
+.lista-carreira{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.card-carreira {
-  flex: 1 1 260px; /* Define a flexibilidade dos cards de carreira */
-  background-color: white; /* Define a cor de fundo dos cards de carreira */
-  border-radius: 15px; /* Adiciona bordas arredondadas aos cards de carreira */
-  box-shadow: 0 10px 25px black; /* Adiciona uma sombra para destacar os cards de carreira */
+.card-carreira{
+  flex: 1 1 260px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px lightgray;
 }
 
-.card-carreira img {
-   border-top-left-radius: 20px; /* Adiciona bordas arredondadas no canto superior esquerdo do card de carreira */
-  border-top-right-radius: 20px; /* Adiciona bordas arredondadas no canto superior direito do card de carreira */
-  width: 100%; /* Garante que a imagem do card de carreira ocupe toda a largura do card */
-  height: 220px; /* Define uma altura fixa para a imagem do card de carreira */
-  object-fit: cover; /* Garante que a imagem mantenha suas proporções e preencha o espaço definido */
+.card-carreira img{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-.card-carreira h3 {
-  padding: 20px 20px 10px; /* Adiciona um preenchimento para o título do card de carreira */
-  font-size: 1.3em; /* Define o tamanho da fonte do título do card de carreira */
-  color: #111827; /* Define a cor do título do card de carreira */
+.card-carreira h3{
+  padding: 20px 20px 10px;
+  font-size: 1.3em;
+  color: #111827;
 }
-
-.card-carreira p {
-  padding: 0px 20px 10px; /* Adiciona um preenchimento para o parágrafo do card de carreira */
-  color: #6b7280; /* Define a cor do parágrafo do card de carreira */
+.card-carreira p{
+  padding: 0px 20px 10px;
+  color: #6b7280;
 }
 
 /* DISPLAY GRID */
 .painel-titulos{
-    display: grid; /* Define o layout como grid */
-    grid-template-columns: repeat(4, 1fr); /* Define colunas responsivas com largura mínima de 200px */
-    gap: 20px; /* Adiciona um espaço entre as colunas */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .item-titulo{
-    background-color: white; /* Define a cor de fundo do item de título */
-    border-radius: 15px; /* Adiciona bordas arredondadas ao item de título */
-    padding: 20px; /* Adiciona um preenchimento para o item de título */
-    box-shadow: 0 10px 25px rgb(0, 140, 255); /* Adiciona uma sombra para destacar o item de título */
-    text-align: center; /* Centraliza o texto dentro do item de título */
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px lightgray;
 }
 
 .item-titulo h3{
-    font-size: 1.2em; /* Define o tamanho da fonte do título do item de título */
-    color: #0043a8; /* Define a cor do título do item de título */
-    margin-bottom: 10px; /* Adiciona uma margem inferior para o título do item de título */
+  font-size: 3em;
+  color: #b91c1c;
+  margin-bottom: 10px;
+}
+.item-titulo p{
+  color: #4b5536;
+  font-weight: 700;
 }
 
-.item-titulo p{
-    font-size: 0.8em; /* Define o tamanho da fonte do parágrafo do item de título */
-    color: #1e293b; /* Define a cor do parágrafo do item de título */
-}
 
 /* SE A TELA FOR TABLET */
-@media  screen and (max-width: 1000px) {
-    .hero {
-        grid-template-columns: 1fr; /* Altera para uma coluna única em telas menores */
-    }
-    .painel-titulos {
-        grid-template-columns: repeat(2, 1fr); /* Altera para uma coluna única em telas menores */
-    }
-    .card-inlineblock {
-        width: 100%; /* Garante que os cards ocupem toda a largura do contêiner em telas menores */
-        margin-right: 2%; /* Adiciona uma margem direita para os cards em telas menores */
-        margin-bottom: 10px; /* Adiciona uma margem inferior para os cards em telas menores */
-    }
-
+@media screen and (max-width:1000px) {
+  .hero{
+    grid-template-columns: 1fr;
+  }
+  .painel-titulos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-inlineblock{
+    width: 48%;
+    margin-right: 2%;
+    margin-bottom: 10px;
+  }
 }
 
 /* SE A TELA FOR CELULAR */
-@media screen and (max-width: 768px) {
-    /* Altera a navbar */
-    .navegacao {
-        flex-direction: column; /* Altera para um layout vertical em telas menores */
-        justify-content: center; /* Centraliza os itens verticalmente em telas menores */
-        padding: 16px 0; /* Adiciona um preenchimento vertical para a navegação em telas menores */
-    }
-    .menu{
-        flex-wrap: wrap; /* Permite que os itens do menu quebrem para a próxima linha se necessário em telas menores */
-        justify-content: center; /* Centraliza os itens do menu em telas menores */
-    }
-    .painel-titulos, .rodape-grid {
-        grid-template-columns: 1fr; /* Altera para uma coluna única em telas menores */
-    }
-    .card-inlineblock {
-        display: block; /* Garante que os cards ocupem toda a largura do contêiner em telas menores */
-        width: 100%; /* Garante que os cards ocupem toda a largura do contêiner em telas menores */ 
-        margin-right: 0; /* Remove a margem direita para os cards em telas menores */
-        margin-bottom: 10px; /* Adiciona uma margem inferior para os cards em telas menores */
-    }
-
-    /* Altera o rodapé */
-    .rodape-grid{
-        text-align: center; /* Centraliza o texto dentro do rodapé em telas menores */
-        justify-items: center; /* Centraliza os itens do rodapé em telas menores */
-    }
+@media screen and (max-width:600px) {
+  /* Altera a navbar */
+  .navegacao{
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 0;
+  }
+  .menu{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Altera elementos no site */
+  .painel-titulos, .rodape-grid{
+    grid-template-columns: 1fr;
+  }
+  /* Altera cards azuis */
+  .card-inlineblock{
+    display: block;
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  /* Altera o rodape */
+  .rodape-grid{
+    text-align: center;
+    justify-items: center;
+  }
 }
